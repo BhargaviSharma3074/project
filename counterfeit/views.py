@@ -72,7 +72,7 @@ def admin_dashboard(request):
     products = Product.objects.all()
     total_products = products.count()
     context = {
-        'products': products[:10],  # Show latest 10
+        'products': products[:10],  
         'total_products': total_products,
     }
     return render(request, 'counterfeit/admin_dashboard.html', context)
@@ -80,7 +80,7 @@ def admin_dashboard(request):
 @login_required
 def user_dashboard(request):
     """User dashboard view"""
-    products = Product.objects.all()[:10]  # Show latest 10
+    products = Product.objects.all()[:10]  
     context = {
         'products': products,
     }
